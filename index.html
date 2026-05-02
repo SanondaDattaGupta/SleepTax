@@ -4,19 +4,59 @@
   <title>SleepTax</title>
 </head>
 <body>
-  <h1>SleepTax: Speculative Sleep-Tracking Device Generator</h1>
 
-  <p>This is an interactive prototype for generating speculative sleep-tracking devices using the SleepTax taxonomy.</p>
+<!-- INTRO SECTION -->
+<div id="intro">
+  <h1>SleepTax Explorer</h1>
+
+  <p>
+    This interactive tool lets you create your own <b>speculative sleep-tracking device</b>.
+    It is based on SleepTax, a taxonomy developed from 350 real-world sleep technologies.
+  </p>
+
+  <p>
+    Instead of designing from scratch, you will choose from real categories of:
+  </p>
+
+  <ul>
+    <li>What the device looks like</li>
+    <li>What it tracks</li>
+    <li>Why people use it</li>
+    <li>Where it is used</li>
+    <li>How it operates over time</li>
+  </ul>
+
+  <h3>How it works</h3>
+  <ul>
+    <li>Select options step by step</li>
+    <li>Each choice shapes your device</li>
+    <li>Generate a speculative sleep-tracking system</li>
+  </ul>
+
+  <button onclick="start()">Get Started</button>
+</div>
+
+<!-- BUILDER SECTION (your original tool, now hidden initially) -->
+<div id="builder" style="display:none;">
+  <h2>Build Your Device</h2>
 
   <button onclick="generateDevice()">Generate Device</button>
 
   <p id="output"></p>
+</div>
 
-  <script>
-    function generateDevice() {
-      document.getElementById("output").innerText =
-        "A smart ring that automatically tracks sleep stages, stress, and body temperature to generate personalized sleep insights.";
-    }
-  </script>
+<!-- SCRIPT -->
+<script>
+function start() {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("builder").style.display = "block";
+}
+
+function generateDevice() {
+  document.getElementById("output").innerText =
+    "A smart ring that automatically tracks sleep stages, stress, and body temperature to generate personalized sleep insights.";
+}
+</script>
+
 </body>
 </html>
