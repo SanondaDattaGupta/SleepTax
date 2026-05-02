@@ -5,56 +5,39 @@
 </head>
 <body>
 
-<!-- INTRO SECTION -->
-<div id="intro">
-  <h1>SleepTax Explorer</h1>
+<h1>SleepTax Explorer</h1>
 
-  <p>
-    This interactive tool lets you create your own <b>speculative sleep-tracking device</b>.
-    It is based on SleepTax, a taxonomy developed from 350 real-world sleep technologies.
-  </p>
+<p>
+  This interactive tool lets you create your own <b>speculative sleep-tracking device</b>.
+  It is based on SleepTax, a taxonomy developed from 350 real-world sleep technologies.
+</p>
 
-  <p>
-    Instead of designing from scratch, you will choose from real categories of:
-  </p>
+<p>
+  Instead of designing from scratch, you will move step by step through:
+</p>
 
-  <ul>
-    <li>What the device looks like</li>
-    <li>What it tracks</li>
-    <li>Why people use it</li>
-    <li>Where it is used</li>
-    <li>How it operates over time</li>
-  </ul>
+<ul>
+  <li>What the device looks like</li>
+  <li>What it tracks</li>
+  <li>Why people use it</li>
+  <li>Where it is used</li>
+  <li>How it operates over time</li>
+</ul>
 
-  <h3>How it works</h3>
-  <ul>
-    <li>Select options step by step</li>
-    <li>Each choice shapes your device</li>
-    <li>Generate a speculative sleep-tracking system</li>
-  </ul>
+<h3>How it works</h3>
+<ul>
+  <li>Follow guided steps</li>
+  <li>Each choice builds your device</li>
+  <li>Generate a speculative scenario at the end</li>
+</ul>
 
-  <button onclick="start()">Get Started</button>
-</div>
+<br>
 
-<!-- BUILDER SECTION (your original tool, now hidden initially) -->
-<div id="builder" style="display:none;">
-  <h2>Build Your Device</h2>
+<button onclick="start()">Get Started</button>
 
-  <button onclick="generateDevice()">Generate Device</button>
-
-  <p id="output"></p>
-</div>
-
-<!-- SCRIPT -->
 <script>
 function start() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("builder").style.display = "block";
-}
-
-function generateDevice() {
-  document.getElementById("output").innerText =
-    "A smart ring that automatically tracks sleep stages, stress, and body temperature to generate personalized sleep insights.";
+  window.location.href = "device-name.html";
 }
 </script>
 
