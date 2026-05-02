@@ -1,1 +1,7 @@
-
+<script>
+function saveName() {
+  const name = document.getElementById("deviceName").value;
+  localStorage.setItem("deviceName", name);
+  window.location.href = "form.html";
+}
+</script>
