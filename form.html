@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form of Technology</title>
+</head>
+<body>
 
+<h2>Step 2: Form of Technology</h2>
+
+<p id="deviceIntro"></p>
+
+<p>
+  Now choose what kind of physical form your speculative sleep-tracking device takes.
+</p>
+
+<h3>Choose the main category</h3>
+
+<select id="mainForm" onchange="showFormOptions()">
+  <option value="">-- Select one --</option>
+  <option value="Non-Wearable Device">Non-Wearable Device</option>
+  <option value="Wearable Device">Wearable Device</option>
+</select>
+
+<br><br>
+
+<div id="nonWearableSection" style="display:none;">
+  <h3>Choose one non-wearable form</h3>
+
+  <select id="nonWearableForm">
+    <option value="">-- Select one --</option>
+    <option value="Bed-based">Bed-based</option>
+    <option value="Night-stand">Night-stand</option>
+    <option value="Room-based">Room-based</option>
+  </select>
+</div>
+
+<div id="wearableSection" style="display:none;">
+  <h3>Choose one wearable form</h3>
+
+  <select id="wearableCategory" onchange="showWearableSubOptions()">
+    <option value="">-- Select one --</option>
+    <option value="Limb-worn">Limb-worn</option>
+    <option value="Neck-worn">Neck-worn</option>
+    <option value="Head-worn">Head-worn</option>
+    <option value="Skin-attached">Skin-attached</option>
+    <option value="Finger-worn">Finger-worn</option>
+  </select>
+
+  <br><br>
+
+  <div id="wearableSubSection" style="display:none;">
+    <h3>Choose the specific wearable device form</h3>
+
+    <select id="wearableSpecificForm">
+      <option value="">-- Select one --</option>
+    </select>
+  </div>
+</div>
+
+<br>
+
+<p id="error" style="color:red;"></p>
+
+<button onclick="goBack()">Back</button>
+<button onclick="saveForm()">Next</button>
+
+<script>
+const deviceName = localStorage.getItem("deviceName");
+
+document.getElementById("deviceIntro").innerHTML =
+  "You are creating: <b>" + deviceName + "</b>";
+
+const wearableOptions = {
+  "Limb-worn": ["Bracelet", "SmartWatch"],
+  "Neck-worn": ["Pendant"],
+  "Head-worn": ["Mask", "HeadBand"],
+  "Skin-attached": ["BodyPatch"],
+  "Finger-worn": ["Ring"]
+};
+
+function showFormOptions() {
+  const mainForm = document.getElementById("mainForm").value;
+
+  document.getElementById("nonWearableSection").style.display = "none";
+  document.getElementById("wearableSection").style.display = "none";
+  document.getElementById("wearableSubSection").style.display = "none";
+
+  document.getElementById("nonWearableForm").value = "";
+  document.getElementById("wearableCategory").value = "";
+  document.getElementById("wearableSpecificForm").innerHTML =
+    '<option value="">-- Select one --</option>';
+
+  if (mainForm === "Non-Wearable Device") {
+    document.getElementById("nonWearableSection").style.display = "block";
+  }
+
+  if (mainForm === "Wearable Device") {
+    document.getElementById("wearableSection").style.display = "block";
+  }
+}
+
+function showWearableSubOptions() {
+  const wearableCategory = document.getElementById("wearableCategory").value;
+  const specificDropdown = document.getElementById("wearableSpecificForm");
+
+  specificDropdown.innerHTML = '<option value="">-- Select one --</option>';
+
+  if (wearableCategory !== "") {
+    wearableOptions[wearableCategory].forEach(function(option) {
+      const newOption = document.createElement("option");
+      newOption.value = option;
+      newOption.textContent = option;
+      specificDropdown.appendChild(newOption);
+    });
+
+    document.getElementById("wearableSubSection").style.display = "block";
+  } else {
+    document.getElementById("wearableSubSection").style.display = "none";
+  }
+}
+
+function saveForm() {
+  const mainForm = document.getElementById("mainForm").value;
+  let formCategory = "";
+  let specificForm = "";
+
+  if (mainForm === "") {
+    document.getElementById("error").innerText =
+      "Please select a main form category.";
+    return;
+  }
+
+  if (mainForm === "Non-Wearable Device") {
+    formCategory = "Non-Wearable Device";
+    specificForm = document.getElementById("nonWearableForm").value;
+
+    if (specificForm === "") {
+      document.getElementById("error").innerText =
+        "Please select one non-wearable form.";
+      return;
+    }
+  }
+
+  if (mainForm === "Wearable Device") {
+    formCategory = document.getElementById("wearableCategory").value;
+    specificForm = document.getElementById("wearableSpecificForm").value;
+
+    if (formCategory === "" || specificForm === "") {
+      document.getElementById("error").innerText =
+        "Please select both a wearable category and a specific wearable form.";
+      return;
+    }
+  }
+
+  localStorage.setItem("mainForm", mainForm);
+  localStorage.setItem("formCategory", formCategory);
+  localStorage.setItem("specificForm", specificForm);
+
+  window.location.href = "functionality.html";
+}
+
+function goBack() {
+  window.location.href = "device-name.html";
+}
+</script>
+
+</body>
+</html>
