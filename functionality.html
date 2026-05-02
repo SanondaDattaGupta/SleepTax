@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functionality</title>
+</head>
+<body>
 
+<h2>Step 3: Functionality</h2>
+
+<p id="deviceIntro"></p>
+
+<p>
+  Choose what your device tracks, supports, or generates. You may select multiple functionalities.
+</p>
+
+<p><b>Rule:</b> Please select at least one sleep-tracking feature.</p>
+
+<form id="functionalityForm">
+
+  <details open>
+    <summary><b>Physiological Metrics</b></summary>
+
+    <h4>Sleep Metrics</h4>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Pattern"> Sleep Pattern</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Latency"> Sleep Latency</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Stage"> Sleep Stage</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Light Sleep"> Light Sleep</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="REM"> REM</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Deep Sleep"> Deep Sleep</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Quality"> Sleep Quality</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Snore"> Snore</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Awakenings"> Awakenings</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Restlessness"> Restlessness</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Continuity"> Sleep Continuity</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Duration"> Sleep Duration</label><br>
+    <label><input type="checkbox" class="sleepMetric" value="Sleep Score"> Sleep Score</label><br>
+
+    <h4>Vital Signs</h4>
+    <label><input type="checkbox" value="Heart Rate"> Heart Rate</label><br>
+    <label><input type="checkbox" value="Blood Pressure"> Blood Pressure</label><br>
+    <label><input type="checkbox" value="Blood Oxygen"> Blood Oxygen</label><br>
+    <label><input type="checkbox" value="Oxygen Saturation SPO2"> Oxygen Saturation SPO2</label><br>
+    <label><input type="checkbox" value="Oxygen Consumption VO2"> Oxygen Consumption VO2</label><br>
+    <label><input type="checkbox" value="ECG"> ECG</label><br>
+    <label><input type="checkbox" value="Body Temperature"> Body Temperature</label><br>
+    <label><input type="checkbox" value="Respiration Rate"> Respiration Rate</label><br>
+  </details>
+
+  <details>
+    <summary><b>Reproductive Health</b></summary>
+    <label><input type="checkbox" value="Menstrual Cycle"> Menstrual Cycle</label><br>
+  </details>
+
+  <details>
+    <summary><b>Affective States</b></summary>
+    <label><input type="checkbox" value="Stress Level"> Stress Level</label><br>
+  </details>
+
+  <details>
+    <summary><b>Nutritional Intake</b></summary>
+    <label><input type="checkbox" value="Water Intake"> Water Intake</label><br>
+    <label><input type="checkbox" value="Food Intake"> Food Intake</label><br>
+  </details>
+
+  <details>
+    <summary><b>Physical Activity</b></summary>
+
+    <h4>Mobility Metrics</h4>
+    <label><input type="checkbox" value="Sedentary Reminder"> Sedentary Reminder</label><br>
+    <label><input type="checkbox" value="Floor Levels"> Floor Levels</label><br>
+    <label><input type="checkbox" value="Elevation Gain"> Elevation Gain</label><br>
+    <label><input type="checkbox" value="Number of Steps"> Number of Steps</label><br>
+
+    <h4>Performance Metrics</h4>
+    <label><input type="checkbox" value="Active Minutes"> Active Minutes</label><br>
+    <label><input type="checkbox" value="Running"> Running</label><br>
+    <label><input type="checkbox" value="Cycling"> Cycling</label><br>
+    <label><input type="checkbox" value="Walking"> Walking</label><br>
+    <label><input type="checkbox" value="Distance Travelled"> Distance Travelled</label><br>
+    <label><input type="checkbox" value="Burned Calories"> Burned Calories</label><br>
+    <label><input type="checkbox" value="Metabolic Rate"> Metabolic Rate</label><br>
+    <label><input type="checkbox" value="Cardio Metrics"> Cardio Metrics</label><br>
+    <label><input type="checkbox" value="Cardio Score"> Cardio Score</label><br>
+    <label><input type="checkbox" value="Cardio Level"> Cardio Level</label><br>
+    <label><input type="checkbox" value="Pace"> Pace</label><br>
+  </details>
+
+  <details>
+    <summary><b>Environment Condition</b></summary>
+    <label><input type="checkbox" value="Ambient Noise"> Ambient Noise</label><br>
+    <label><input type="checkbox" value="Light"> Light</label><br>
+    <label><input type="checkbox" value="Air Quality"> Air Quality</label><br>
+    <label><input type="checkbox" value="Temperature"> Temperature</label><br>
+    <label><input type="checkbox" value="Humidity"> Humidity</label><br>
+  </details>
+
+  <details>
+    <summary><b>Personalized Insights</b></summary>
+    <label><input type="checkbox" value="Prediction"> Prediction</label><br>
+    <label><input type="checkbox" value="Recommendation"> Recommendation</label><br>
+    <label><input type="checkbox" value="Report"> Report</label><br>
+    <label><input type="checkbox" value="Alert"> Alert</label><br>
+    <label><input type="checkbox" value="Assessment"> Assessment</label><br>
+    <label><input type="checkbox" value="Status"> Status</label><br>
+  </details>
+
+  <details>
+    <summary><b>Interoperable App Integration</b></summary>
+    <label><input type="checkbox" value="Social Media"> Social Media</label><br>
+    <label><input type="checkbox" value="Personal Assistant"> Personal Assistant</label><br>
+    <label><input type="checkbox" value="Health-App"> Health-App</label><br>
+  </details>
+
+  <details>
+    <summary><b>Sleep Hygiene Support</b></summary>
+
+    <h4>Sleep Aid</h4>
+    <label><input type="checkbox" value="Meditation"> Meditation</label><br>
+    <label><input type="checkbox" value="Relax Mode"> Relax Mode</label><br>
+    <label><input type="checkbox" value="Breathing Session"> Breathing Session</label><br>
+    <label><input type="checkbox" value="Soothing Sound"> Soothing Sound</label><br>
+
+    <h4>Awake Mode</h4>
+    <label><input type="checkbox" value="Awake Light"> Awake Light</label><br>
+    <label><input type="checkbox" value="Alarm Clock"> Alarm Clock</label><br>
+  </details>
+
+  <details>
+    <summary><b>Time Measurement</b></summary>
+    <label><input type="checkbox" value="Timer"> Timer</label><br>
+    <label><input type="checkbox" value="Stop Watch"> Stop Watch</label><br>
+  </details>
+
+</form>
+
+<p id="error" style="color:red;"></p>
+
+<button onclick="goBack()">Back</button>
+<button onclick="saveFunctionalities()">Next</button>
+
+<script>
+const deviceName = localStorage.getItem("deviceName");
+const specificForm = localStorage.getItem("specificForm");
+
+document.getElementById("deviceIntro").innerHTML =
+  "You are creating: <b>" + deviceName + "</b><br>" +
+  "Selected form: <b>" + specificForm + "</b>";
+
+function saveFunctionalities() {
+  const allChecked = document.querySelectorAll('#functionalityForm input[type="checkbox"]:checked');
+  const selectedFunctionalities = Array.from(allChecked).map(item => item.value);
+
+  const sleepMetricChecked = document.querySelectorAll('.sleepMetric:checked');
+
+  if (sleepMetricChecked.length === 0) {
+    document.getElementById("error").innerText =
+      "Please select at least one sleep-tracking feature from Sleep Metrics.";
+    return;
+  }
+
+  localStorage.setItem("functionalities", JSON.stringify(selectedFunctionalities));
+
+  window.location.href = "self-inform.html";
+}
+
+function goBack() {
+  window.location.href = "form.html";
+}
+</script>
+
+</body>
+</html>
