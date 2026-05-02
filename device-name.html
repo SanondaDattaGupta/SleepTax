@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Device Name</title>
+</head>
+<body>
+
+<h2>Step 1: Name Your Device</h2>
+
+<p>
+  The first step in creating your speculative sleep-tracking device is to give it a name.
+</p>
+
+<input type="text" id="deviceName" placeholder="e.g., SleepLegible">
+
+<p><b>Naming rules:</b></p>
+<ul>
+  <li>Must start with a letter</li>
+  <li>Only letters, numbers, "_" or "-"</li>
+  <li>No spaces allowed</li>
+  <li>At least 3 characters</li>
+</ul>
+
+<p id="error" style="color:red;"></p>
+
+<button onclick="saveName()">Next</button>
+
+<script>
+function saveName() {
+  const name = document.getElementById("deviceName").value;
+
+  // REGEX:
+  // ^[A-Za-z] → starts with a letter
+  // [A-Za-z0-9_-]{2,} → rest can be letters/numbers/_/- and at least 2 more chars
+  const regex = /^[A-Za-z][A-Za-z0-9_-]{2,}$/;
+
+  if (!regex.test(name)) {
+    document.getElementById("error").innerText =
+      "Invalid name. Please follow the naming rules.";
+    return;
+  }
+
+  // Save to localStorage
+  localStorage.setItem("deviceName", name);
+
+  // Go to next page
+  window.location.href = "form.html";
+}
+</script>
+
+</body>
+</html>
 
