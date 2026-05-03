@@ -2,6 +2,33 @@
 <html>
 <head>
   <title>Functionality</title>
+
+  <style>
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    details {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 12px;
+      background-color: #f9f9f9;
+    }
+
+    summary {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin: 4px 0;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -16,7 +43,8 @@
 <p><b>Rule:</b> Please select at least one sleep-tracking feature.</p>
 
 <form id="functionalityForm">
-
+  
+  <div class="category-grid">
   <details open>
     <summary><b>Physiological Metrics</b></summary>
 
@@ -130,6 +158,7 @@
     <label><input type="checkbox" value="Timer"> Timer</label><br>
     <label><input type="checkbox" value="Stop Watch"> Stop Watch</label><br>
   </details>
+  </div>  
 
 </form>
 
