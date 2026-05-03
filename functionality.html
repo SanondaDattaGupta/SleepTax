@@ -5,17 +5,18 @@
 
   <style>
     .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
 
     details {
       border: 1px solid #ccc;
       border-radius: 10px;
-      padding: 12px;
       background-color: #f9f9f9;
+      height: 100%;
+      padding: 12px;
     }
 
     summary {
@@ -74,23 +75,7 @@
     <label><input type="checkbox" value="Respiration Rate"> Respiration Rate</label><br>
   </details>
 
-  <details>
-    <summary><b>Reproductive Health</b></summary>
-    <label><input type="checkbox" value="Menstrual Cycle"> Menstrual Cycle</label><br>
-  </details>
-
-  <details>
-    <summary><b>Affective States</b></summary>
-    <label><input type="checkbox" value="Stress Level"> Stress Level</label><br>
-  </details>
-
-  <details>
-    <summary><b>Nutritional Intake</b></summary>
-    <label><input type="checkbox" value="Water Intake"> Water Intake</label><br>
-    <label><input type="checkbox" value="Food Intake"> Food Intake</label><br>
-  </details>
-
-  <details>
+     <details>
     <summary><b>Physical Activity</b></summary>
 
     <h4>Mobility Metrics</h4>
@@ -113,33 +98,7 @@
     <label><input type="checkbox" value="Pace"> Pace</label><br>
   </details>
 
-  <details>
-    <summary><b>Environment Condition</b></summary>
-    <label><input type="checkbox" value="Ambient Noise"> Ambient Noise</label><br>
-    <label><input type="checkbox" value="Light"> Light</label><br>
-    <label><input type="checkbox" value="Air Quality"> Air Quality</label><br>
-    <label><input type="checkbox" value="Temperature"> Temperature</label><br>
-    <label><input type="checkbox" value="Humidity"> Humidity</label><br>
-  </details>
-
-  <details>
-    <summary><b>Personalized Insights</b></summary>
-    <label><input type="checkbox" value="Prediction"> Prediction</label><br>
-    <label><input type="checkbox" value="Recommendation"> Recommendation</label><br>
-    <label><input type="checkbox" value="Report"> Report</label><br>
-    <label><input type="checkbox" value="Alert"> Alert</label><br>
-    <label><input type="checkbox" value="Assessment"> Assessment</label><br>
-    <label><input type="checkbox" value="Status"> Status</label><br>
-  </details>
-
-  <details>
-    <summary><b>Interoperable App Integration</b></summary>
-    <label><input type="checkbox" value="Social Media"> Social Media</label><br>
-    <label><input type="checkbox" value="Personal Assistant"> Personal Assistant</label><br>
-    <label><input type="checkbox" value="Health-App"> Health-App</label><br>
-  </details>
-
-  <details>
+ <details>
     <summary><b>Sleep Hygiene Support</b></summary>
 
     <h4>Sleep Aid</h4>
@@ -152,6 +111,52 @@
     <label><input type="checkbox" value="Awake Light"> Awake Light</label><br>
     <label><input type="checkbox" value="Alarm Clock"> Alarm Clock</label><br>
   </details>
+
+    <details>
+    <summary><b>Personalized Insights</b></summary>
+    <label><input type="checkbox" value="Prediction"> Prediction</label><br>
+    <label><input type="checkbox" value="Recommendation"> Recommendation</label><br>
+    <label><input type="checkbox" value="Report"> Report</label><br>
+    <label><input type="checkbox" value="Alert"> Alert</label><br>
+    <label><input type="checkbox" value="Assessment"> Assessment</label><br>
+    <label><input type="checkbox" value="Status"> Status</label><br>
+  </details>
+
+     <details>
+    <summary><b>Environment Condition</b></summary>
+    <label><input type="checkbox" value="Ambient Noise"> Ambient Noise</label><br>
+    <label><input type="checkbox" value="Light"> Light</label><br>
+    <label><input type="checkbox" value="Air Quality"> Air Quality</label><br>
+    <label><input type="checkbox" value="Temperature"> Temperature</label><br>
+    <label><input type="checkbox" value="Humidity"> Humidity</label><br>
+  </details>
+    
+  <details>
+    <summary><b>Reproductive Health</b></summary>
+    <label><input type="checkbox" value="Menstrual Cycle"> Menstrual Cycle</label><br>
+  </details>
+
+  <details>
+    <summary><b>Affective States</b></summary>
+    <label><input type="checkbox" value="Stress Level"> Stress Level</label><br>
+  </details>
+
+  <details>
+    <summary><b>Nutritional Intake</b></summary>
+    <label><input type="checkbox" value="Water Intake"> Water Intake</label><br>
+    <label><input type="checkbox" value="Food Intake"> Food Intake</label><br>
+  </details>
+
+  
+
+  <details>
+    <summary><b>Interoperable App Integration</b></summary>
+    <label><input type="checkbox" value="Social Media"> Social Media</label><br>
+    <label><input type="checkbox" value="Personal Assistant"> Personal Assistant</label><br>
+    <label><input type="checkbox" value="Health-App"> Health-App</label><br>
+  </details>
+
+ 
 
   <details>
     <summary><b>Time Measurement</b></summary>
