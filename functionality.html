@@ -3,33 +3,44 @@
 <head>
   <title>Functionality</title>
 
-  <style>
+ <style>
+  .category-grid {
+    column-count: 3;
+    column-gap: 20px;
+    margin-top: 20px;
+  }
+
+  details {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #f9f9f9;
+  }
+
+  summary {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    margin: 4px 0;
+  }
+
+  @media (max-width: 900px) {
     .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  align-items: stretch;
-}
-
-    details {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: #f9f9f9;
-      height: 100%;
-      padding: 12px;
+      column-count: 2;
     }
+  }
 
-    summary {
-      font-size: 16px;
-      cursor: pointer;
+  @media (max-width: 600px) {
+    .category-grid {
+      column-count: 1;
     }
-
-    label {
-      display: block;
-      margin: 4px 0;
-    }
-  </style>
-
+  }
+</style>
 </head>
 <body>
 
